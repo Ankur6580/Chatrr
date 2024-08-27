@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background-color: #A9E5BB;
+}
+
+.chat-container {
+  width: 80vw;
+  max-width: 1080px;
+  background-color: #FCF6B1;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  background-image: radial-gradient(#FFFFFF 2.5px, transparent 2.5px);
+	background-size: 32px 32px;
+	background-color: #FCF6B1;
+}
+
+.messages {
+  height: 500px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  mix-blend-mode: darken;
+  overflow-y: scroll;
+}
+
+.message {
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+  width: fit-content;
+  max-width: 60%;
+  word-wrap: break-word;
+  display: inline-block;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  background-image: radial-gradient(#A9CFE5 1px, transparent 1px), radial-gradient(#A9CFE5 1px, transparent 1px);
+  background-size: 12px 12px;
+  background-position: 0 0, 6px 6px;
+}
+
+.message.sent {
+  background-color: #d1e7dd;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.message.received {
+  background-color: #f8d7da;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+#messageInput {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+@media (max-width: 25em) {
+  .chat-container{
+    height: 90dvh;
+    width: 90vw;
+  }
+
+  .messages{
+    height: 90%;
+  }
+}
